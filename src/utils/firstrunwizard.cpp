@@ -1,6 +1,6 @@
 /*
  * This file is part of QtEmu project.
- * Copyright (C) 2017-2020 Sergio Carlavilla <carlavilla @ mailbox.org>
+ * Copyright (C) 2017-2023 Sergio Carlavilla <sergio.carlavilla91 @ gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -241,6 +241,9 @@ void QEMUBinariesPage::setQemuBinariesPath()
     QString qemuDefaultBinariesPath = QDir::toNativeSeparators("/usr/local/bin/");
 #endif
 #ifdef Q_OS_FREEBSD
+    QString qemuDefaultBinariesPath = QDir::toNativeSeparators("/usr/local/bin/");
+#endif
+#ifdef Q_OS_NETBSD
     QString qemuDefaultBinariesPath = QDir::toNativeSeparators("/usr/local/bin/");
 #endif
 

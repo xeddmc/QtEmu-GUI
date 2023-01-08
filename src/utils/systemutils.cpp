@@ -1,6 +1,6 @@
 /*
  * This file is part of QtEmu project.
- * Copyright (C) 2017-2020 Sergio Carlavilla <carlavilla @ mailbox.org>
+ * Copyright (C) 2017-2023 Sergio Carlavilla <sergio.carlavilla91 @ gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -76,6 +76,13 @@ void SystemUtils::getTotalMemory(int &totalRAM)
     totalRAM = static_cast<int>(((memory) * 0.976562) / 1024 / 1024);
 #endif
 #ifdef Q_OS_FREEBSD
+    size_t len;
+    unsigned long memory;
+    len = sizeof(memory);
+    sysctlbyname("hw.physmem", &memory, &len, NULL, 0);
+    totalRAM = static_cast<int>(((memory) * 0.976562) / 1024 / 1024);
+#endif
+#ifdef Q_OS_NETBSD
     size_t len;
     unsigned long memory;
     len = sizeof(memory);

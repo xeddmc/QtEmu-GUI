@@ -1,7 +1,7 @@
 /*
  * This file is part of QtEmu project.
  * Copyright (C) 2006-2009 Urs Wolfer <uwolfer @ fwo.ch> and Ben Klopfenstein <benklop gmail com>
- * Copyright (C) 2017-2020 Sergio Carlavilla <carlavilla @ mailbox.org>
+ * Copyright (C) 2017-2023 Sergio Carlavilla <sergio.carlavilla91 @ gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -103,7 +103,7 @@ void AboutWidget::hideEvent(QHideEvent *event)
 AboutTab::AboutTab(QWidget *parent) : QWidget(parent)
 {
     QLabel *about = new QLabel(tr("QtEmu is a graphical user interface for QEMU"), this);
-    QLabel *copyright = new QLabel("Copyright (C) 2006-2009 Urs Wolfer and Ben Klopfenstein\nCopyright (C) 2017-2020 Sergio Carlavilla Delgado", this);
+    QLabel *copyright = new QLabel("Copyright (C) 2006-2009 Urs Wolfer and Ben Klopfenstein\nCopyright (C) 2017-2023 Sergio Carlavilla Delgado", this);
     QLabel *urlSite = new QLabel("<a href=\"https://www.qtemu.org\">www.qtemu.org</a>", this);
 
     m_mainLayout = new QVBoxLayout(this);
@@ -141,7 +141,7 @@ AuthorsTab::AuthorsTab(QWidget *parent) : QWidget(parent)
                    "</p>"
                    "<p>"
                       "Sergio Carlavilla Delgado<br />"
-                      "&nbsp;&nbsp;" + tr("Email") + ": <a href=\"mailto\">carlavilla@mailbox.org</a><br />"
+                      "&nbsp;&nbsp;" + tr("Email") + ": <a href=\"mailto\">sergio.carlavilla91@gmail.com</a><br />"
                       "&nbsp;&nbsp;Current developer"
                    "</p>"
                    );
